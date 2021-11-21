@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>css block
+  </title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    header {
+      background-color: black;
+    }
+
+    header div {
+      width: 600px;
+      background-color: black;
+      margin: auto;
+      color: white;
+    }
+
+    p {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul.cards {
+      width: 600px;
+      margin: auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.cards li {
+      width: 180px;
+      height: 40px;
+      box-sizing: border-box;
+      border: 3px solid;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 34px;
+      background-color: pink;
+    }
+
+    ul.cards li:hover {
+      background-color: red;
+    }
+
+    ul.cards li:nth-child(n+5) {
+      margin-left: 210px;
+    }
+
+    ul.cards li:nth-child(n+9) {
+      margin-left: 420px;
+    }
+
+    ul.cards li:nth-child(4n+5) {
+      margin-top: -220px;
+    }
+
+
+    ul.links {
+      padding: 0%;
+      width: 600px;
+      margin: auto;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    ul.links li {
+      border-bottom: 1px dotted;
+      padding-top: 1px;
+      margin-top: -1px;
+      margin-bottom: -1px;
+    }
+
+    .plast {
+      background-color: rgb(238, 138, 238);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      hellow world请调整窗口
+    </div>
+  </header>
+  <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+    宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+    宽度600px</p>
+  <ul class="cards">
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+
+  </ul>
+
+
+  <ul class="links">
+    <li>links</li>
+    <li>links</li>
+    <li>links</li>
+    <li>links</li>
+    <li>links</li>
+  </ul>
+  <p class="plast">©版权所有<br>本页所有布局均使用块元素</p>
+
+</body>
+
+</html>
