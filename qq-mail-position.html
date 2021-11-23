@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by gitxsfh (http://jsbin.com/maqorog/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>qq position</title>
+<style id="jsbin-css">
+    * {
+      padding: 0; margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+
+      position: relative;
+    }
+
+    .header {
+      width: 100vw; height: 100px;
+      background-color: #31465f;
+    }
+
+    .side-menu {
+      width: 200px; height: calc(100vh - 100px);
+      background-color: #e8ebef;
+    }
+
+    .content {
+      width: calc(100vw - 200px);
+      height: calc(100vh - 100px);
+      background-color: green;
+
+      position: absolute;
+      top: 100px;
+      left: 200px;
+    }
+</style>
+</head>
+<body>
+  <div class="header"></div>
+  <div class="side_menu"></div>
+  <div class="content"></div>
+</body>
+</html>
