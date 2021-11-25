@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin ios yyy421
+  </title>
+  <style id="jsbin-css">
+    /* 开关盒 */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* 隐藏检查盒 */
+    .switch input {
+      display: none;
+    }
+
+    /* 滑块 */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+
+    }
+
+    input:checked+.slider {
+      background-color: #21f32c;
+    }
+
+    input:focus+.slider {
+      box-shadow: 0 0 1px #21f32c;
+    }
+
+    input:checked+.slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* 圆形滑动 */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <label class="switch">
+    <input type="checkbox"></input>
+    <div class="slider round"></div>
+  </label>
+</body>
+
+</html>

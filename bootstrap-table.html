@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>9grid y421</title>
+  <style>
+    * {
+      box-shadow: inset 0 0 1px red;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {}
+
+      ;
+      border-bottom: 2px solid #212529;
+
+
+      tr {
+        border-bottom: #DEE2E6 1px solid;
+      }
+
+      td,
+      th {
+        padding: .5em;
+        text-align: left;
+      }
+
+      &.table-striped {
+        tbody tr:nth-child(odd) {
+          background-color: #f2f2f2;
+        }
+      }
+
+      &.table-hover {
+        tbody tr:hover {
+          background-color: #ECECEC;
+        }
+      }
+
+      &.table-bordered {
+
+        td,
+        th {
+          border: 1px solid #DEE2E6;
+        }
+      }
+
+      &.table-borderless {
+
+        thead,
+        tr {
+          border: none;
+        }
+      }
+
+      &.table-sm {
+
+        th,
+        td {
+          padding: .25em;
+        }
+      }
+
+      &.table-dark {
+        background-color: #212529;
+        color: white;
+
+        thead {
+          border-bottom-color: white;
+        }
+
+        tr {
+          border-bottom-color: #373B3E;
+        }
+
+        &.table-striped {
+          tbody tr:nth-child(odd) {
+            background-color: #2C3034;
+          }
+        }
+
+        &.table-hover {
+          tbody tr:hover {
+            background-color: #323539;
+          }
+        }
+
+        &.table-bordered {
+
+          td,
+          th {
+            border-color: #373B3E;
+          }
+        }
+      }
+    }
+
+    .table-responsive {
+      display: block;
+      overflow-x: auto;
+
+      tbody,
+      thead,
+      tfoot {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table
+    class="table-responsive table xtable-striped table-hover xtable-sm xtable-bordered table-borderless xtable-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>
