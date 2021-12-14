@@ -1,0 +1,278 @@
+<script id="ch0103/01">
+  var a = 0;
+  var b = 0;
+  a = Number(prompt("请输入整数a:", "0"));
+  b = Number(prompt("请输入整数b:", "0"));
+  console.log("a+b=", (a + b));
+</script>
+
+<script id="ch0103/02">
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  a = Number(prompt("请输入整数a:", "0"));
+  b = Number(prompt("请输入整数b:", "0"));
+  c = Number(prompt("请输入整数c:", "0"));
+  console.log("(a + b) * c = ", (a + b) * c);
+</script>
+
+<script id="ch0103/03">
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  a = Number(prompt("请输入整数a:", "0"));
+  b = Number(prompt("请输入整数b:", "0"));
+  c = Number(prompt("请输入整数c:", "0"));
+  var d = (a + b) / c;
+  console.log("(a + b) / c = ", Math.trunc(d));
+</script>
+<script id="ch0103/04">
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  a = Number(prompt("请输入整数a:", "0"));
+  b = Number(prompt("请输入整数b:", "0"));
+  var d = a / b;
+  d = Math.trunc(d);
+  c = a % b;
+  console.log("a / b = ", d, "......", c);
+</script>
+<script id="ch0103/05">
+  var a = 0;
+  var b = 0;
+  var temp = 0;
+  a = Number(prompt("请输入整数a:", "0"));
+  b = Number(prompt("请输入整数b:", "0"));
+  var d = a / b;
+  temp = Math.trunc(d);
+  d = d - temp;
+  console.log(d.toFixed(9));
+</script>
+
+<script id="ch0103/06">
+  var a = 0;
+  var b = 0;
+  var temp = 0;
+  a = Number(prompt("请输入整数a总人数:", "0"));
+  b = Number(prompt("请输入整数b确诊数:", "0"));
+  temp = (b / a) * 100;
+  var c = temp.toFixed(3)
+  console.log(c, "%");
+</script>
+
+<script id="ch0103/07">
+  var x = Number(prompt("请输入数x:", "0"));
+  var a = Number(prompt("请输入数a:", "0"));
+  var b = Number(prompt("请输入数b:", "0"));
+  var c = Number(prompt("请输入数c:", "0"));
+  var d = Number(prompt("请输入数d:", "0"));
+  var y = a * x * x * x + b * x * x + c * x + d;
+  console.log(y);
+</script>
+
+<script id="ch0103/08">
+  var f = Number(prompt("请输入华氏度f:", "0"));
+  var c = 5 * (f - 32) / 9;
+  console.log(c.toFixed(5));
+</script>
+
+<script id="ch0103/09">
+
+  var r = Number(prompt("请输入半径r:", "0"));
+  var d = 2 * r;
+  var c = 2 * Math.PI * r;
+  var s = Math.PI * r * r;
+  console.log(d.toFixed(4), c.toFixed(4), s.toFixed(4));
+</script>
+
+<script id="ch0103/10">
+  var r1 = Number(prompt("请输入数r1:", "0"));
+  var r2 = Number(prompt("请输入数r2:", "0"));
+  var R = 1 / ((1 / r1) + (1 / r2));
+  console.log(R.toFixed(2));
+</script>
+
+<script id="ch0103/11">
+  var a = Number(prompt("请输入数a:", "0"));
+  var b = Number(prompt("请输入数b:", "0"));
+  var c = a % b;
+  console.log(c.toFixed(4));
+</script>
+
+<script id="ch0103/12">
+
+  var r = Number(prompt("请输入半径r:", "0"));
+  var Pi = 3.14;
+  var v = 4 / 3 * Pi * r * r * r;
+  console.log(v.toFixed(2));
+</script>
+
+<script id="ch0103/13">
+  var a = Number(prompt("请输入数a:", "0"));
+  var a100 = a / 100;
+  a100 = Math.trunc(a100);
+
+  var temp = a % 100;
+  var a10 = temp / 10;
+  a10 = Math.trunc(a10);
+
+  var a1 = temp % 10;
+  console.log(a1 * 100 + a10 * 10 + a100);///////////////////
+</script>
+
+<script id="ch0103/14">
+  var h = Number(prompt("请输入h:", "0"));
+  var r = Number(prompt("请输入半径r:", "0"));
+  var Pi = 3.14159;
+  var a = 20;
+  var v = Pi * r * r * h / 1000;
+  var n = a / v;
+  n = Math.ceil(n)
+  console.log(n);
+</script>
+
+<script id="ch0103/15">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var x = Number(prompt("请输入整数x:", "0"));
+  var y = Number(prompt("请输入整数y:", "0"));
+  var a = y / x;
+  a = Math.ceil(a)
+  console.log(n - a);
+</script>
+
+<script id="ch0103/16">
+  var Xa = Number(prompt("请输入A点横坐标Xa:", "0"));
+  var Ya = Number(prompt("请输入A点纵坐标Ya:", "0"));
+  var Xb = Number(prompt("请输入B点横坐标Xb:", "0"));
+  var Yb = Number(prompt("请输入B点纵坐标Yb:", "0"));
+  var a = Math.sqrt((Xb - Xa) * (Xb - Xa) + (Yb - Ya) * (Yb - Ya));
+
+  console.log(a.toFixed(3));
+</script>
+
+
+<script id="ch0103/17">
+  var x1 = Number(prompt("请输入A点横坐标x1:", "0"));
+  var y1 = Number(prompt("请输入A点纵坐标y1:", "0"));
+  var x2 = Number(prompt("请输入B点横坐标x2:", "0"));
+  var y2 = Number(prompt("请输入B点纵坐标y2:", "0"));
+  var x3 = Number(prompt("请输入c点横坐标x3:", "0"));
+  var y3 = Number(prompt("请输入c点纵坐标y3:", "0"));
+  var s1 = x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2;
+  var s = (Math.abs(s1)) / 2;
+  console.log(s.toFixed(2));
+</script>
+
+<script id="ch0103/18">
+  var a1 = Number(prompt("请输入数a1:", "0"));
+  var a2 = Number(prompt("请输入数a2:", "0"));
+  var n = Number(prompt("请输入数n:", "0"));
+  var ax = a1 + (n - 1) * (a2 - a1);
+  console.log(ax);
+</script>
+
+<script id="ch0103/19">
+  var A = Number(prompt("请输入数A:", "0"));
+  var B = Number(prompt("请输入数B:", "0"));
+  console.log(A * B);
+</script>
+
+<script id="ch0103/20">
+  var n = Number(prompt("请输入数n:", "0"));
+  var x = Math.pow(2, n)
+  console.log(x);
+</script>
+
+<script id="ch0104/01">
+  var x = Number(prompt("请输入数x:", "0"));
+  var x = Math.pow(2, n)
+  var s = (Math.abs(s1)) / 2;
+  console.log(x);////////////////////////////////////
+</script>
+
+<script id="ch0104/02">
+  var x = Number(prompt("请输入数x:", "0"));
+  var a = (Math.abs(x));
+  console.log(a.toFixed(2));
+</script>
+
+<script id="ch0104/03">
+  var x = Number(prompt("请输入数x:", "0"));
+  if (x % 2 == 0)
+    console.log("even");
+  else
+    console.log("odd");
+</script>
+
+<script id="ch0104/04">//////////////////////////////
+  var x = Number(prompt("请输入数x:", "0"));
+  if (x % 2 == 0)
+    console.log("even");
+  else
+    console.log("odd");
+</script>
+
+<script id="ch0104/05">
+  var x = Number(prompt("请输入数x:", "0"));
+  var y = Number(prompt("请输入数y:", "0"));
+  if (x > y)
+    console.log(">");
+  else if (x == y)
+    console.log("=");
+  else
+    console.log("<");
+</script>
+
+<script id="ch0104/06">
+  var x = Number(prompt("请输入数x:", "0"));
+  if (x < 100 && x > 9)
+    console.log("1");
+  else
+    console.log("0");
+</script>
+
+<script id="ch0104/07">
+  var x = Number(prompt("请输入数x:", "0"));
+  var y = Number(prompt("请输入数y:", "0"));
+  if (x >= 10 || y >= 20)
+    console.log("1");
+  else
+    console.log("0");
+</script>
+
+<script id="ch0104/08">
+  var x = Number(prompt("请输入数x:", "0"));
+  if ((x % 3 == 0) && (x % 5 == 0))
+    console.log("YES");
+  else
+    console.log("NO");
+</script>
+
+<script id="ch0104/09">//////////////////////
+  var x = Number(prompt("请输入数x:", "0"));
+  if (x % 3 == 0)
+    console.log("3");
+  else if (x % 5 == 0)
+    console.log("5");
+  else if (x % 7 == 0);
+  console.log("7");
+    else
+  console.log("n");
+</script>
+
+<script id="ch0104/10">
+  var x = Number(prompt("请输入数x:", "0"));
+  var y = Number(prompt("请输入数y:", "0"));
+  if ((x >= 60 && y < 60) || (x < 60 && y >= 60))
+    console.log("1");
+  else
+    console.log("0");
+</script>
+
+<script id="ch0104/10">
+  var x = Number(prompt("请输入数x:", "0"));
+  if ((x != && y < 60) || (x < 60 && y >= 60))
+    console.log("1");
+  else
+    console.log("0");
+</script>
