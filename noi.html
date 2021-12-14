@@ -3,7 +3,7 @@
   var b = 0;
   a = Number(prompt("请输入整数a:", "0"));
   b = Number(prompt("请输入整数b:", "0"));
-  console.log("a+b=", (a + b));
+      console.log(a + b);
 </script>
 
 <script id="ch0103/02">
@@ -13,7 +13,7 @@
   a = Number(prompt("请输入整数a:", "0"));
   b = Number(prompt("请输入整数b:", "0"));
   c = Number(prompt("请输入整数c:", "0"));
-  console.log("(a + b) * c = ", (a + b) * c);
+      console.log((a + b) * c);
 </script>
 
 <script id="ch0103/03">
@@ -24,7 +24,8 @@
   b = Number(prompt("请输入整数b:", "0"));
   c = Number(prompt("请输入整数c:", "0"));
   var d = (a + b) / c;
-  console.log("(a + b) / c = ", Math.trunc(d));
+      console.log(Math.trunc(d));
+
 </script>
 <script id="ch0103/04">
   var a = 0;
@@ -35,7 +36,7 @@
   var d = a / b;
   d = Math.trunc(d);
   c = a % b;
-  console.log("a / b = ", d, "......", c);
+      console.log(d, c);
 </script>
 <script id="ch0103/05">
   var a = 0;
@@ -269,10 +270,48 @@
     console.log("0");
 </script>
 
-<script id="ch0104/10">
+<script id="ch0104/11">
   var x = Number(prompt("请输入数x:", "0"));
-  if ((x != && y < 60) || (x < 60 && y >= 60))
-    console.log("1");
+  if (x != 1 && x != 3 && x != 5)
+    console.log("YES");
   else
-    console.log("0");
+    console.log("NO");
+</script>
+
+<script id="ch0104/12">
+  var x = Number(prompt("请输入数x:", "0"));
+  var biketime = x / 3 + 27 + 23;
+  var walktime = x / 1.2;
+  if (biketime < walktime)
+    console.log("Bike");
+  else if (biketime > walktime)
+    console.log("Walk");
+  else
+    console.log("All");
+</script>
+
+<script id="ch0104/13">
+  var x = Number(prompt("请输入数x:", "0"));
+
+  if (x >= 0 && x < 5)
+    var y = -x + 2.5;
+  else if (x >= 5 && x < 10)
+    y = 2 - 1.5 * (x - 3) * (x - 3);
+  else
+    y = x / 2 - 1.5;
+
+  console.log(y.toFixed(3));
+</script>
+
+<script id="ch0104/14">
+  var x = Number(prompt("请输入数x:", "0"));
+
+  if (x >= 0 && x < 5)
+    var y = -x + 2.5;
+  else if (x >= 5 && x < 10)
+    y = 2 - 1.5 * (x - 3) * (x - 3);
+  else
+            y = x / 2 - 1.5;
+
+          console.log(y.toFixed(3));
 </script>
