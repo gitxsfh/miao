@@ -404,20 +404,290 @@
 
 <script id="ch0105/01">
   var n = Number(prompt("请输入整数n:", "0"));
+  var age = 0, total_age = 0, i = 0;
 
   while (n > 0) {
-
+    age = Number(prompt("请输入:", "0"));
+    total_age = total_age + age;
+    n = n - 1;
+    i = i + 1;
   }
-
-
-  var x = Number(prompt("请输入整数x:", "0"));
-  var y = Number(prompt("请输入整数y:", "0"));
-  var a = y / x;
-  var a1 = Math.trunc(a);
-  var b = a - a1;
-  if (b > 0)
-  a = a1 +1;
-  else
-  a = a;
-  console.log(n - a);
+  var average = total_age / i;
+  console.log(average.toFixed(2));
 </script>
+
+<script id="ch0105/02">
+  var n = 12, i = 0;;
+  var money = 0, total_money = 0;
+  while (n > 0) {
+    money = Number(prompt("请输入:", "0"));
+    total_money = total_money + money;
+    n = n - 1;
+    i = i + 1;
+  }
+  var average = total_money / i;
+  console.log("$" + average.toFixed(2));
+</script>
+
+<script id="ch0105/03">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var age = 0, total_age = 0, i = 0;
+
+  while (n > 0) {
+    age = Number(prompt("请输入:", "0"));
+    total_age = total_age + age;
+    n = n - 1;
+    i = i + 1;
+  }
+  var average = total_age / i;
+  console.log(average.toFixed(4));
+</script>
+
+<script id="ch0105/04">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var age = 0, total_age = 0, i = 0;
+
+  while (n > 0) {
+    age = Number(prompt("请输入:", "0"));
+    total_age = total_age + age;
+    n = n - 1;
+    i = i + 1;
+  }
+  var average = total_age / i;
+  console.log(total_age);
+  console.log(average.toFixed(5));
+</script>
+
+<script id="ch0105/05">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var age = 0, max_age = 0, min_age = 0;
+  while (n > 0) {
+    age = Number(prompt("请输入:", "0"));
+    if (age > max_age)
+      max_age = age;
+    n = n - 1;
+  }
+  console.log(max_age);
+</script>
+
+<script id="ch0105/06">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var age = 0, max_age = 0, min_age = 1000;
+
+  while (n > 0) {
+    age = Number(prompt("请输入:", "0"));
+    if (age > max_age)
+      max_age = age;
+    if (age <  min_age)
+      min_age = age;
+    n = n - 1;
+  }
+  console.log(max_age - min_age);
+</script>
+
+<script id="ch0105/07">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var a1 = 0, a2 = 0, a3 = 0, a_total = 0;
+  var a1total = 0, a2total = 0, a3total = 0;
+  while (n > 0) {
+    a1 = Number(prompt("请输入金:", "0"));
+    a1total = a1 + a1total;
+    a2 = Number(prompt("请输入银:", "0"));
+    a2total = a2 + a2total;
+    a3 = Number(prompt("请输入铜:", "0"));
+    a3total = a3 + a3total;
+    n = n - 1;
+  }
+  a_total = a1total + a2total + a3total;
+  console.log(a1total, a2total, a3total, a_total);
+</script>
+
+<script id="ch0105/08">
+  var n = Number(prompt("请输入整数n:", "0"));
+  var totalangle = (n - 2) * 180;
+  while (n > 1) {
+    angle = Number(prompt("请输入:", "0"));
+    totalangle = totalangle - angle;
+    n = n - 1;
+  }
+  console.log(totalangle);
+</script>
+
+<script id="ch0105/09">
+  var m = Number(prompt("请输入整数m:", "0"));
+  var n = Number(prompt("请输入整数n:", "0"));
+  var total = 0;
+  if (m % 2 == 0)
+  m = m + 1;
+  if (n % 2 == 0)
+  n = n - 1;
+
+  while (m <= n) {
+    total = total + m;
+    m = m + 2;
+  }
+  console.log(total);
+</script>
+
+<script id="ch0105/10">
+  var m = Number(prompt("请输入整数m:", "0"));
+  var n = Number(prompt("请输入整数n:", "0"));
+  var total = 0;
+  if (m % 2 == 0)
+  m = m + 1;
+  if (n % 2 == 0)
+  n = n - 1;
+
+  while (m <= n) {
+    total = total + m;
+    m = m + 2;
+  }
+  console.log(total);
+</script>
+
+<script id="ch0105/11">
+  var k = Number(prompt("请输入整数k:", "0"));
+  var a1 = 0, a5 = 0, a10 = 0, a_total = 0;
+  while (k > 0) {
+    a = Number(prompt("请输入:", "0"));
+    if (a == 1)
+    a1 = a1 + 1;
+    if (a == 5)
+    a5 = a5 + 1;
+    if (a == 10)
+    a10 = a10 + 1;
+
+    k = k - 1;
+  }
+  console.log(a1, a5, a10);
+</script>
+
+<script id="ch0105/12">
+  var k = Number(prompt("请输入整数k:", "0"));
+  var m = Number(prompt("请输入整数m:", "0"));
+  var a1 = 0;
+  while (k > 0) {
+    a = Number(prompt("请输入:", "0"));
+    if (a == m)
+    a1 = a1 + 1;
+
+    k = k - 1;
+  }
+  console.log(a1);
+</script>
+
+<script id="ch0105/13">
+  var a = Number(prompt("请输入整数a:", "0"));
+  var n = Number(prompt("请输入整数n:", "0"));
+  var atotal = 1;
+  while (n > 0) {
+    atotal = a * atotal;
+    n = n - 1;
+  }
+  console.log(atotal);
+</script>
+
+<script id="ch0105/14">
+  var x = Number(prompt("请输入整数x:", "0"));
+  var n = Number(prompt("请输入整数n:", "0"));
+  var xtotal = x;
+  while (n > 0) {
+    xtotal = xtotal + xtotal * 0.001;
+    n = n - 1;
+  }
+  console.log(xtotal.toFixed(4));
+</script>
+
+<script id="ch0105/15">
+  var r = Number(prompt("请输入整数R:", "0"));
+  var x = Number(prompt("请输入整数M:", "0"));
+  var n = Number(prompt("请输入整数Y:", "0"));
+  var xtotal = x;
+  while (n > 0) {
+    xtotal = xtotal + xtotal * r / 100;
+    n = n - 1;
+  }
+  xtotal = Math.trunc(xtotal);
+  console.log(xtotal);
+</script>
+
+<script id="ch0105/16">//TODO
+  var x = Number(prompt("请输入年薪N:", "0"));
+  var r = Number(prompt("请输入整数K:", "0"));
+  var hotal = 200 ;//房价
+  var xtotal = x;
+  var n = 1;
+  if (xtotal < hotal) {
+  while (n <=20) {
+    hotal = hotal + hotal * r / 100;
+    xtotal = xtotal + x;
+    n = n + 1;
+  }
+}
+  xtotal = Math.trunc(xtotal);
+  console.log(xtotal);
+</script>
+
+<script id="ch0105/17">//TODO
+  var n = Number(prompt("请输入整数K:", "0"));
+  var a1 = a2 = 1;
+  var ak;
+  if (n < 2)
+  ak = a1;
+  while (n > 2) {
+    xtotal = xtotal + xtotal * r / 100;
+    n = n - 1;
+  }
+  xtotal = Math.trunc(xtotal);
+  console.log(xtotal);
+</script>
+
+<script id="ch0105/18">
+  var n = Number(prompt("请输入整数:", "0"));
+  var m = 1;
+  var x1 = Number(prompt("请输入第一组数:", "0"));
+  var y1 = Number(prompt("请输入第一组数:", "0"));
+  var newrate = oldrate = y1 / x1;
+  var x = y = 1;
+  while (m < n) {
+    x = Number(prompt("请输入数:", "0"));
+    y = Number(prompt("请输入数:", "0"));
+    newrate = y / x;
+    if (newrate - oldrate > 0.05)
+      console.log("better");
+      else if (oldrate - newrate > 0.05)
+      console.log("worse");
+        else
+        console.log("same");
+    m = m + 1;
+  }
+</script>
+
+<script id="ch0105/19">
+  var n = Number(prompt("请输入整数:", "0"));
+  var x = y = s = time = total_time = 0;
+  while (n > 0) {
+    x = Number(prompt("请输入坐标:", "0"));
+    y = Number(prompt("请输入坐标:", "0"));
+    people = Number(prompt("请输入人数:", "0"));
+    s = Math.sqrt(x * x + y * y);
+    time = s * 2 / 50 + people * (1 + 0.5);
+    total_time = total_time + time;
+    n = n - 1;
+  }
+  total_time = Math.ceil(total_time);
+  console.log(total_time);
+</script>
+
+<script id="ch0105/20">
+  var height = Number(prompt("请输入整数height:", "0"));
+  var n = 10;
+  var totalheight = height;
+  while (n > 0) {
+    height = height / 2;
+    totalheight = totalheight +height;
+    n = n - 1;
+  }
+  console.log(totalheight, height);
+</script>
+
