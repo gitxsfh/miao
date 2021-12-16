@@ -623,35 +623,40 @@
   console.log(xtotal);
 </script>
 
-<script id="ch0105/16">//TODO
-  var x = Number(prompt("请输入年薪N:", "0"));
+<script id="ch0105/16">////买房
+  var N = Number(prompt("请输入年薪N:", "0"));
   var r = Number(prompt("请输入整数K:", "0"));
   var hotal = 200 ;//房价
-  var xtotal = x;
-  var n = 1;
-  if (xtotal < hotal) {
-  while (n <=20) {
+  var totalmoney = N;
+  var totalyear = year = 2;
+  while (totalmoney < hotal && year <= 20) {
     hotal = hotal + hotal * r / 100;
-    xtotal = xtotal + x;
-    n = n + 1;
+    totalmoney = totalmoney + N;
+    if (totalmoney >= hotal) {
+      console.log(year);
+    }
+    year = year + 1;
   }
-}
-  xtotal = Math.trunc(xtotal);
-  console.log(xtotal);
+  if (totalmoney < hotal)
+  console.log('Impossible');
 </script>
 
-<script id="ch0105/17">//TODO
+<script id="ch0105/17">
   var n = Number(prompt("请输入整数K:", "0"));
   var a1 = a2 = 1;
-  var ak;
-  if (n < 2)
-  ak = a1;
-  while (n > 2) {
-    xtotal = xtotal + xtotal * r / 100;
-    n = n - 1;
+  var an, an_1, an_2;
+  var n_min = 3;
+  if (n < 3) {
+    console.log(1);
+  } else {
+    while (n_min <= n) {
+    a3 = a1 + a2;
+    a1 = a2;
+    a2 = a3;
+    n_min = n_min + 1;
   }
-  xtotal = Math.trunc(xtotal);
-  console.log(xtotal);
+  console.log(a3);
+  }
 </script>
 
 <script id="ch0105/18">
@@ -675,7 +680,7 @@
   }
 </script>
 
-<script id="ch0105/19">
+<script id="ch0105/19">//洪水救人
   var n = Number(prompt("请输入整数:", "0"));
   var x = y = s = time = total_time = 0;
   while (n > 0) {
@@ -718,7 +723,7 @@
   console.log("End");
 </script>
 
-<script id="ch0105/22">
+<script id="ch0105/22">//静静存钱储蓄
   var percost, n = 1, perSonIncome = 300, perSonSave = 0;
   var toMam = 0, MamsMoney=0,month = 0;
   while (n <=12) {
@@ -739,4 +744,79 @@
     } else {
       console.log(perSonSave + MamsMoney * 1.2);
     }
+</script>
+
+<script id="ch0105/23">//药店库存
+  var store = Number(prompt("请输入整数:", "0"));
+  var people = Number(prompt("请输入数:", "0"));
+  var n = 1;
+  var nomedic = 0;
+  while (n <= people) {
+    perneed = Number(prompt("请输入:", "0"));
+    if (perneed > store) {
+      n = n + 1
+      nomedic = nomedic + 1;
+    } else {
+      store = store - perneed;
+      n = n + 1;
+    }
+  }
+  console.log(nomedic);
+</script>
+
+<script id="ch0105/24">//血压时间
+  var n = Number(prompt("请输入整数:", "0"));
+  var time = 0;
+  while (n > 0) {
+    max = Number(prompt("请输入:", "0"));
+    min = Number(prompt("请输入:", "0"));
+    if (max >= 90 && max <= 140 && min >= 60 && min <= 90) {
+      time = time + 1;
+    } else {
+      time = 0;
+    }
+    n = n - 1;
+  }
+  console.log(time);
+</script>
+
+<script id="ch0105/26">//四位数
+  var n = Number(prompt("请输入整数:", "0"));
+  var time = 0, result;
+  while (n > 0) {
+    max = Number(prompt("请输入:", "0"));//1234
+    max1 = max % 10;//4
+    max10 = (max - max1) / 10 % 10;//3
+    max100 = (max - max10 * 10- max1) / 100 % 10;//2
+    max1000 = (max - max10 * 10- max1 - max100 * 100) / 1000 % 10;//1
+    result = max1 - max1000 - max100 - max10;
+    if (result > 0) {
+      time = time + 1;
+    }
+    n = n - 1;
+  }
+  console.log(time);
+</script>
+
+<script id="ch0105/27">//级数求和
+  var k1 = Number(prompt("请输入整数:", "0"));
+  var n = 1, sum = 0;
+  while (sum <= k1) {
+    sun = sum + 1 / n;
+    n = n + 1;
+  }
+  console.log(n);
+</script>
+
+<script id="ch0105/28">//分离任意整数//TODO
+  var n = Number(prompt("请输入整数:", "0"));//567
+  var x = 0;//位数选择器
+  var long = n.length;
+  var pernumber;
+  while (x < long) {
+    pernumber= n.charAt(x)
+    console.log(pernumber);
+    x = x - 1;
+  }
+
 </script>
