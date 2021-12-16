@@ -238,13 +238,18 @@
     console.log("NO");
 </script>
 
-<script id="ch0104/09">///////////////////////////////////////////////////////
+<script id="ch0104/09">
   var x = Number(prompt("请输入数x:", "0"));
 
-  if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0)
-    console.log("3 5 7");
-  else { if ()
-  }
+  if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0) {
+    if (x % 3 == 0)
+    console.log(3);
+  if (x % 5 == 0)
+    console.log(5);
+  if (x % 7 == 0)
+    console.log(7);
+  } else
+  console.log("no");
 
 </script>
 
@@ -279,8 +284,9 @@
 
 <script id="ch0104/13">
   var x = Number(prompt("请输入数x:", "0"));
+  var y;
   if (x >= 0 && x < 5)
-    var y = -x + 2.5;
+    y = -x + 2.5;
   else if (x >= 5 && x < 10)
     y = 2 - 1.5 * (x - 3) * (x - 3);
   else
@@ -382,7 +388,7 @@
     y = Math.sqrt(4 * a * c - b * b) / (2 * a);
     var x1 = String(x.toFixed(5)) + "+" + String(y.toFixed(5)) + "i";
     var x2 = String(x.toFixed(5)) + "-" + String(y.toFixed(5)) + "i";
-    console.log("x1=" + x1,";","x2=" + x2);
+    console.log( x1, x2);
   }
   }
 </script>
