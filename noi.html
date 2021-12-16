@@ -243,7 +243,7 @@
 
   if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0) {
     if (x % 3 == 0)
-    console.log();
+    console.log(3);
   if (x % 5 == 0)
     console.log(5);
   if (x % 7 == 0)
@@ -341,8 +341,8 @@
 </script>
 
 <script id="ch0104/17">
-  var a = Number(prompt("请输入数a:", "0"));
-  if (x % 4 == 0 && x % 100 != 0 || x % 400 == 0)
+  var x = Number(prompt("请输入数a:", "0"));
+  if ((x % 4 == 0 && x % 100 != 0) || x % 400 == 0)
     console.log("Y");
   else
     console.log("N");
