@@ -430,23 +430,21 @@
   console.log(average.toFixed(2));
 </script>
 
-<script id="ch0105/02">
-  var n = 12, i = 0;;
+<script id="ch0105/02">//TODO
+  var n = 12;
   var money = 0, total_money = 0;
   while (n > 0) {
     money = Number(prompt("请输入:", "0"));
     total_money = total_money + money;
     n = n - 1;
-    i = i + 1;
   }
-  var average = total_money / i;
+  var average = total_money / 12;
   console.log("$" + average.toFixed(2));
 </script>
 
 <script id="ch0105/03">
   var n = Number(prompt("请输入整数n:", "0"));
   var age = 0, total_age = 0, i = 0;
-
   while (n > 0) {
     age = Number(prompt("请输入:", "0"));
     total_age = total_age + age;
@@ -499,7 +497,7 @@
   console.log(max_age - min_age);
 </script>
 
-<script id="ch0105/07">
+<script id="ch0105/07">//金银铜奖牌
   var n = Number(prompt("请输入整数n:", "0"));
   var a1 = 0, a2 = 0, a3 = 0, a_total = 0;
   var a1total = 0, a2total = 0, a3total = 0;
@@ -516,7 +514,7 @@
   console.log(a1total, a2total, a3total, a_total);
 </script>
 
-<script id="ch0105/08">
+<script id="ch0105/08">//多边形内角和
   var n = Number(prompt("请输入整数n:", "0"));
   var totalangle = (n - 2) * 180;
   while (n > 1) {
@@ -527,7 +525,7 @@
   console.log(totalangle);
 </script>
 
-<script id="ch0105/09">
+<script id="ch0105/09">////m~n奇数求和
   var m = Number(prompt("请输入整数m:", "0"));
   var n = Number(prompt("请输入整数n:", "0"));
   var total = 0;
@@ -535,7 +533,6 @@
   m = m + 1;
   if (n % 2 == 0)
   n = n - 1;
-
   while (m <= n) {
     total = total + m;
     m = m + 2;
@@ -543,7 +540,7 @@
   console.log(total);
 </script>
 
-<script id="ch0105/10">
+<script id="ch0105/10">//17//TODO,10:27
   var m = Number(prompt("请输入整数m:", "0"));
   var n = Number(prompt("请输入整数n:", "0"));
   var total = 0, a = 0;
@@ -557,7 +554,7 @@
   console.log(total);
 </script>
 
-<script id="ch0105/11">
+<script id="ch0105/11">//TODO,11:32
   var k = Number(prompt("请输入整数k:", "0"));
   var a1 = 0, a5 = 0, a10 = 0, a_total = 0;
   while (k > 0) {
@@ -582,7 +579,6 @@
     a = Number(prompt("请输入:", "0"));
     if (a == m)
     a1 = a1 + 1;
-
     k = k - 1;
   }
   console.log(a1);
@@ -599,7 +595,7 @@
   console.log(atotal);
 </script>
 
-<script id="ch0105/14">
+<script id="ch0105/14">//人口增长
   var x = Number(prompt("请输入整数x:", "0"));
   var n = Number(prompt("请输入整数n:", "0"));
   var xtotal = x;
@@ -610,7 +606,7 @@
   console.log(xtotal.toFixed(4));
 </script>
 
-<script id="ch0105/15">
+<script id="ch0105/15">//银行利率
   var r = Number(prompt("请输入整数R:", "0"));
   var x = Number(prompt("请输入整数M:", "0"));
   var n = Number(prompt("请输入整数Y:", "0"));
@@ -624,11 +620,11 @@
 </script>
 
 <script id="ch0105/16">////买房
-  var N = Number(prompt("请输入年薪N:", "0"));
+  var N = Number(prompt("请输入年薪N:", "0"));//年薪小于50万
   var r = Number(prompt("请输入整数K:", "0"));
   var hotal = 200 ;//房价
   var totalmoney = N;
-  var totalyear = year = 2;
+  var year = 2;
   while (totalmoney < hotal && year <= 20) {
     hotal = hotal + hotal * r / 100;
     totalmoney = totalmoney + N;
@@ -641,13 +637,13 @@
   console.log('Impossible');
 </script>
 
-<script id="ch0105/17">
-  var n = Number(prompt("请输入整数K:", "0"));
-  var a1 = a2 = 1;
-  var an, an_1, an_2;
+<script id="ch0105/17">//斐波那契数列
+  var n = Number(prompt("请输入整数K:", "0"));//n为正整数
+  var a1 = 1, a2 = 1;
+  var a3 = 0;
   var n_min = 3;
   if (n < 3) {
-    console.log(1);
+    console.log(a1);
   } else {
     while (n_min <= n) {
     a3 = a1 + a2;
@@ -809,14 +805,78 @@
 </script>
 
 <script id="ch0105/28">//分离任意整数//TODO
-  var n = Number(prompt("请输入整数:", "0"));//567
-  var x = 0;//位数选择器
+  var n = Number(prompt("请输入整数:", "0"));//567//位数选择器
   var long = n.length;
-  var pernumber;
-  while (x < long) {
-    pernumber= n.charAt(x)
-    console.log(pernumber);
-    x = x - 1;
+  var pernumber = '', newchart = '';
+  for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
+    pernumber= String(n.charAt(x));
+    newchart = newchart + pernumber;
+  }
+  console.log(newchart);
+</script>
+
+<script id="ch0105/32">//分数数列求和
+  var n = Number(prompt("请输入整数n:", "0"));
+  var a1 = a2 = 1;
+  var an, an_1, an_2;
+  var n_min = 3;
+  if (n < 3) {
+    console.log(1);
+  } else {
+    while (n_min <= n) {
+    a3 = a1 + a2;
+    a1 = a2;
+    a2 = a3;
+    n_min = n_min + 1;
+  }
+  console.log(a3);
+  }
+</script>
+
+<script id="ch0105/34">//阶乘的和求和
+  //debugger
+  var n = Number(prompt("请输入整数n:", "0"));
+  var sum, totalsum = 0;
+  var i = 0 , j = 0;
+  for (i = n; i >= 1 ; i = i - 1) {
+    sum = 1;
+    for (j = 1; j <= i ; j = j + 1) {
+        sum = sum * j;
+    }
+    totalsum = totalsum + sum;
   }
 
+  console.log(totalsum);
+</script>
+
+<script id="ch0105/35">//e阶乘的和
+  //debugger
+  var n = Number(prompt("请输入整数n:", "0"));
+  var sum, totalsum = 1;
+  var i = 0 , j = 0;
+  for (i = n; i >= 1 ; i = i - 1) {
+    sum = 1;
+    for (j = 1; j <= i ; j = j + 1) {
+        sum = sum * j;
+    }
+    totalsum = totalsum + 1 / sum;
+  }
+
+  console.log(totalsum);
+</script>
+
+<script id="ch0105/36">//多项式的和
+  //debugger
+  var x = Number(prompt("请输入整数x:", "0"));
+  var n = Number(prompt("请输入整数n:", "0"));
+  var sum, totalsum = 1;
+  var i = 0, j = 0;
+  for (i = n; i >= 1; i = i - 1) {
+    sum = 1;
+    for (j = 1; j <= i; j = j + 1) {
+      sum = sum * x;
+    }
+    totalsum = totalsum + sum;
+  }
+  console.log(totalsum);
 </script>
