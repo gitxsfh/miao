@@ -804,12 +804,80 @@
   console.log(n);
 </script>
 
-<script id="ch0105/28">//分离任意整数//TODO分离任意整数
+<script id="ch0105/28">//分离任意整数//
   var n = String(prompt("请输入整数:", "0"));//567//位数选择器
   var long = n.length;
   for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
     console.log(n.charAt(x));
   }
+</script>
+
+<script id="ch0105/29">//分离任意整数//字符串法
+  var n = String(prompt("请输入整数:", "0"));//567//位数选择器
+  var long = n.length;//
+  var perchart = '', newchart = '';
+  n_number = Number(n);
+  if (n_number > 0) {
+    for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
+      perchart = n.charAt(x)
+      newchart = newchart + perchart;
+    }
+    console.log(Number(newchart));
+  } else if(n_number < 0) {
+    newchart = '-';
+    for ( var x = (long - 1) ; x >= 1 ; x = x - 1) {
+      perchart = n.charAt(x)
+      newchart = newchart + perchart;
+    }
+    console.log(Number(newchart));
+  } else {
+    console.log(0);
+  }
+</script>
+
+<script id="ch0105/29_2">//TODO分离任意整数//取余法
+  var n = Number(prompt("请输入整数:", "0"));//567//位数选择器
+  for (var i = 1 ; i)
+    a1 = n % 10;
+    newnumber = a1 * 10;
+</script>
+
+<script id="ch0105/30">//含k个3的数19整除
+  var m = Number(prompt("请输入整数m:", "0"));
+  var k = Number(prompt("请输入整数k:", "0"));
+  if (m % 19 == 0) {
+    var n = String(m);//位数选择器
+    var long = n.length, kNumber = 0;
+    for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
+        if (n.charAt(x) == '3') {
+          kNumber = kNumber + 1;
+        }
+    }
+    if (kNumber == k) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  } else {
+    console.log('NO');
+  }
+</script>
+
+<script id="ch0105/31">//开关灯
+  //debugger
+  var n = Number(prompt("请输入整数N:", "0"));
+  var m = Number(prompt("请输入整数M:", "0"));
+  var sum, totalsum = 0;
+  var i = 0 , j = 0;
+  for (i = n; i >= 1 ; i = i - 1) {
+    sum = 1;
+    for (j = 1; j <= i ; j = j + 1) {
+        sum = sum * j;
+    }
+    totalsum = totalsum + sum;
+  }
+
+  console.log(totalsum);
 </script>
 
 <script id="ch0105/32">//分数数列求和
