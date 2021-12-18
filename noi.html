@@ -430,7 +430,7 @@
   console.log(average.toFixed(2));
 </script>
 
-<script id="ch0105/02">//TODO
+<script id="ch0105/02">
   var n = 12;
   var money = 0, total_money = 0;
   while (n > 0) {
@@ -525,7 +525,7 @@
   console.log(totalangle);
 </script>
 
-<script id="ch0105/09">////m~n奇数求和
+<script id="ch0105/09">////m~n奇数求和//TODO，m，n奇数求和
   var m = Number(prompt("请输入整数m:", "0"));
   var n = Number(prompt("请输入整数n:", "0"));
   var total = 0;
@@ -533,39 +533,39 @@
   m = m + 1;
   if (n % 2 == 0)
   n = n - 1;
-  while (m <= n) {
-    total = total + m;
+  while (m <= n) {  //此处首尾为奇数，等差数列公式,项数为(n-m)/2+1
+    total = total + m;//total = ((n - m) / 2 + 1)*(m + n) / 2;
     m = m + 2;
   }
   console.log(total);
 </script>
 
-<script id="ch0105/10">//17//TODO,10:27
+<script id="ch0105/10">//17倍数整除
   var m = Number(prompt("请输入整数m:", "0"));
   var n = Number(prompt("请输入整数n:", "0"));
   var total = 0, a = 0;
-  while (m <= n) {
+  if (m % 17 != 0) {}
+    m = (m + 17 - m % 17);////////per17= Math.trunc(m / 17);  ;m = 17 + per17 * 17
     a = m;
-    if (a % 17 == 0) {
-      total = total + a;
+  while (a <= n) {        ////*while (m <= n) {a = m;if (a % 17 == 0) {total = total + a;}m = m +1;}*/
+    total = total + a;
+    a = a + 17;
     }
-    m = m +1;
-  }
   console.log(total);
 </script>
 
-<script id="ch0105/11">//TODO,11:32
+<script id="ch0105/11">//,1,5,10出现的次数
   var k = Number(prompt("请输入整数k:", "0"));
   var a1 = 0, a5 = 0, a10 = 0, a_total = 0;
   while (k > 0) {
     a = Number(prompt("请输入:", "0"));
-    if (a == 1)
+    if (a == 1) {
     a1 = a1 + 1;
-    if (a == 5)
+  } else if (a == 5) {
     a5 = a5 + 1;
-    if (a == 10)
+  } else if (a == 10) {
     a10 = a10 + 1;
-
+  }
     k = k - 1;
   }
   console.log(a1, a5, a10);
@@ -637,7 +637,7 @@
   console.log('Impossible');
 </script>
 
-<script id="ch0105/17">//斐波那契数列
+<script id="ch0105/17">//斐波那契数列//TODO斐波那契数列
   var n = Number(prompt("请输入整数K:", "0"));//n为正整数
   var a1 = 1, a2 = 1;
   var a3 = 0;
@@ -692,7 +692,7 @@
   console.log(total_time);
 </script>
 
-<script id="ch0105/20">//TODO
+<script id="ch0105/20">//TODO.球弹跳高度
   var height = Number(prompt("请输入整数height:", "0"));
   var n = 1;
   var totalheight = height;
@@ -804,33 +804,42 @@
   console.log(n);
 </script>
 
-<script id="ch0105/28">//分离任意整数//TODO
-  var n = Number(prompt("请输入整数:", "0"));//567//位数选择器
+<script id="ch0105/28">//分离任意整数//TODO分离任意整数
+  var n = String(prompt("请输入整数:", "0"));//567//位数选择器
   var long = n.length;
-  var pernumber = '', newchart = '';
   for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
-    pernumber= String(n.charAt(x));
-    newchart = newchart + pernumber;
+    console.log(n.charAt(x));
   }
-  console.log(newchart);
 </script>
 
 <script id="ch0105/32">//分数数列求和
   var n = Number(prompt("请输入整数n:", "0"));
-  var a1 = a2 = 1;
-  var an, an_1, an_2;
-  var n_min = 3;
-  if (n < 3) {
-    console.log(1);
-  } else {
-    while (n_min <= n) {
-    a3 = a1 + a2;
-    a1 = a2;
-    a2 = a3;
-    n_min = n_min + 1;
+  var p1_1 = 1, q1_1 = 2;//q为分子，1_1第一项的1子
+  var totalsum = 0, aq = 0;
+  for (var i = 1 ; i <= n ; i = i + 1) {
+    aq = q1_1 / p1_1;
+    totalsum = totalsum + aq;
+    q2_1 = q1_1 + p1_1;//3
+    p2_1 = q1_1;//2
+    q1_1 = q2_1;//3
+    p1_1 = p2_1;//2
   }
-  console.log(a3);
+  console.log(totalsum.toFixed(4));
+</script>
+<script id="ch0105/33">//分数加减表达式的值
+  //debugger
+  var n = Number(prompt("请输入整数n:", "0"));
+  var sum = 0, totalsum = 0;
+  var i = 0 ;
+  for (i = 1; i <= n ; i = i + 1) {
+    if (i % 2 == 0) {
+    sum = -1 / i;
+    } else {
+      sum = 1 / i;
+    }
+    totalsum = totalsum + sum;
   }
+  console.log(totalsum.toFixed(4));
 </script>
 
 <script id="ch0105/34">//阶乘的和求和
