@@ -837,13 +837,13 @@
 </script>
 
 <script id="ch0105/27">//级数求和
-  var k1 = Number(prompt("请输入整数:", "0"));
+  var k = Number(prompt("请输入整数:", "0"));
   var n = 1, sum = 0;
-  while (sum <= k1) {
-    sun = sum + 1 / n;
+  while (sum <= k) {
+    sum = sum + 1 / n;
     n = n + 1;
   }
-  console.log(n);
+  console.log(n - 1);
 </script>
 
 <script id="ch0105/28">//分离任意整数//
