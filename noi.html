@@ -908,7 +908,7 @@
 <script id="ch0105/31">//开关灯
   //debugger
   var n = Number(prompt("请输入整数N:", "0"));
-  var m = Number(prompt("请输入整数M:", "0"));
+  var mpeople = Number(prompt("请输入整数M:", "0"));
   var sum, totalsum = 0;
   var i = 0 , j = 0;
   for (i = n; i >= 1 ; i = i - 1) {
@@ -999,3 +999,110 @@
   }
   console.log(totalsum.toFixed(2));
 </script>
+
+<script id="ch0105/37">//雇佣兵
+  //debugger
+  var maxbody = Number(prompt("请输入整数m:", "0"));
+  var startStrength = Number(prompt("请输入整数n:", "0"));
+  var power = Number(prompt("请输入整数x:", "0"));
+  var startbody = 0;
+
+
+  console.log(totalsum.toFixed(2));
+</script>
+<script id="ch0105/38">//计算多项式的导函数
+  //debugger
+  var maxbody = Number(prompt("请输入整数m:", "0"));
+  var startStrength = Number(prompt("请输入整数n:", "0"));
+  var power = Number(prompt("请输入整数x:", "0"));
+  var startbody = 0;
+
+
+  console.log(totalsum.toFixed(2));
+</script>
+<script id="ch0105/39">//与7无关的数
+  //debugger
+  var n = Number(prompt("请输入整数m:", "0"));
+  var sum = 0;
+  for (var ntemp = 1 ; ntemp <=n ; ntemp++) {
+    if (ntemp % 7 != 0 )  {
+      var is7 = false;
+      var nChart = String(ntemp)
+      var long = nChart.length;
+      for (var i = 0 ; i < long ; i ++) {
+        if (nChart.charAt(i) != '7') {
+          continue;
+        } else {
+          is7 = true;
+          break;
+        }
+      }
+      if (is7 == false) {
+        sum = sum + ntemp * ntemp;
+      }
+    }
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/40">//数1的个数
+//debugger
+  var n = Number(prompt("请输入整数m:", "0"));
+  var sum = 0;
+  for (var ntemp = 1; ntemp <= n; ntemp++) {
+    var nChart = String(ntemp)
+    var long = nChart.length;
+    for (var i = 0; i < long; i++) {
+      if (nChart.charAt(i) == '1') {
+        sum = sum + 1;
+      }
+    }
+  }
+    console.log(sum);
+</script>
+
+<script id="ch0105/41">//数2的个数,数字统计
+//debugger
+  var nmin = Number(prompt("请输入整数L:", "0"));
+  var nmax = Number(prompt("请输入整数R:", "0"));
+  var sum = 0;
+  for (var ntemp = nmin; ntemp <= nmax; ntemp++) {
+    var nChart = String(ntemp)
+    var long = nChart.length;
+    for (var i = 0; i < long; i++) {
+      if (nChart.charAt(i) == '2') {
+        sum = sum + 1;
+      }
+    }
+  }
+    console.log(sum);
+</script>
+
+<script id="ch0105/42">//画矩形
+  //debugger
+  var height = Number(prompt("请输入整数h:", "3"));
+  var width = Number(prompt("请输入整数w:", "3"));
+  var symbol = String(prompt("请输入符号:", "@"));
+  var ishollow = Number(prompt("请输入整数w:", "1"));
+  var n = '';
+  for (var heightTemp = 1; heightTemp <= height; heightTemp++) {
+    n = '';
+    for (widthTemp = 1; widthTemp <= width; widthTemp++) {
+      if (ishollow == 1) {
+        n = n + symbol;
+      } else {
+        if (heightTemp == 1 || heightTemp == height)  {
+          n = n + symbol;
+        } else {
+          if (widthTemp == 1 || widthTemp == width) {
+            n = n + symbol;
+          } else {
+            n = n + ' ';
+          }
+        }
+      }
+    }
+    console.log(n);
+    console.log('\n');
+  }
+  </script>
