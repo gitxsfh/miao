@@ -854,7 +854,7 @@
   }
 </script>
 
-<script id="ch0105/29">//分离任意整数//字符串法
+<script id="ch0105/29">//按位取反//字符串法
   var n = String(prompt("请输入整数:", "0"));//567//位数选择器
   var long = n.length;//
   var perchart = '', newchart = '';
@@ -1105,4 +1105,20 @@
     console.log(n);
     console.log('\n');
   }
+  </script>
+
+<script id="ch0105/45">//金币
+  //debugger
+  var n = Number(prompt("请输入整数m:", "0"));
+  var an = 0, day = 0, sum = 0;//首相为1，公差1等差数列求和公式
+  var delt = 0.5 * 0.5 + 4 * 0.5 * n;//
+  an = -0.5 + Math.sqrt(delt);//第an项
+  day = Math.floor(an);//前整数天
+  for(var i = 1 ; i <= day ; i++) {//求金币总数
+    sum = sum + i * i;
+  }
+  sumtemp = day + day * (day - 1) / 2;//前几天所得金币数
+  sum = sum + (n - sumtemp)  * (day + 1) * (day + 1);总数
+
+    console.log(sum);
   </script>
