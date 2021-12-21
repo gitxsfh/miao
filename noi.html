@@ -1019,14 +1019,14 @@
   var n;
   for ( var i = 1 ; i <= group ; i++) {
     n = Number(prompt("请输入最高次数n:", "0"));
-    var result = '';
+    var result = '';//也可不用字符串，每个数字单独console
     if (n == 0) {
         n = Number(prompt("请输入各项系数n:", "0"));
         console.log(0);
     } else {
       for (var xn = n ; xn >= 0 ; xn--) {//各项次数
         var C = Number(prompt("请输入各项系数:", "0"));
-        var xn_1 = String(C * xn);//不用字符串，每个数字单独console
+        var xn_1 = String(C * xn);//也可不用字符串，每个数字单独console
         if (xn == 0) {
           xn_1 = '';
         }
@@ -1148,7 +1148,7 @@
 <script id="ch0105/44">//第n小的质数
     //debugger
   var n = Number(prompt("请输入整数m:", "0"));
-  var primeMath = 2, primesnumber = 1;
+  var primeMath = 2, primesnumber = 0;
   var isprime = function (x) {////素数判断质数函数
     if (x > 1) {
       for (var i = 2 ; i * i <=x ; i++) {
@@ -1160,13 +1160,16 @@
     } else
     return;
   }
-  while (primesnumber <= n) {//边界条件
+  while (primesnumber <= n) {
     if (isprime(primeMath)) {
       primesnumber++;
+      if (primesnumber == n) {
+        break;
+      }
     }
     primeMath++;
   }
-  console.log(primeMath-1);
+  console.log(primeMath);
 </script>
 
 <script id="ch0105/45">//金币
@@ -1182,4 +1185,183 @@
   sumtemp = day + day * (day - 1) / 2;//前几天所得金币数
   sum = sum + (n - sumtemp)  * (day + 1) * (day + 1);//总数
   console.log(sum);
+  </script>
+
+<script id="narcissistic">//水仙花数
+  //debugger
+  var isnarcissistic = function (x) {//判断它数是否是水仙花数
+    var n = String(x);
+    var long = n.length;
+    var sum = 0
+      for (var i = 0; i < long ; i ++) {
+        var a = Number(n.charAt(i));
+        sum = sum + Math.pow(a, 3);
+      }
+      if (sum == x) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+  var n = Number(prompt("请输入整数m:", "0"));
+    if (isnarcissistic(n)) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  </script>
+
+<script id="narcissistics">// 输出10000以内的水仙花数
+  //debugger
+  var isnarcissistic = function (x) {//判断它数是否是水仙花数
+    var n = String(x);
+    var long = n.length;
+    var sum = 0
+      for (var i = 0; i < long ; i ++) {
+        var a = Number(n.charAt(i));
+        sum = sum + Math.pow(a, 3);
+      }
+      if (sum == x) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+  for (var n = 2 ; n <=10000 ; n++) {
+    if (isnarcissistic(n)) {
+      console.log(n);
+    }
+  }
+  </script>
+
+<script id="sqrt">//求它的平方根，
+  //debugger
+  var n = Number(prompt("请输入整数m:", "0"));
+  var an = 0, day = 0, sum = 0;//首相为1，公差1等差数列求和公式
+  var delt = 0.5 * 0.5 + 4 * 0.5 * n;//
+  an = -0.5 + Math.sqrt(delt);//第an项
+  day = Math.floor(an);//前整数天
+  for(var i = 1 ; i <= day ; i++) {//求金币总数
+    sum = sum + i * i;
+  }
+  sumtemp = day + day * (day - 1) / 2;//前几天所得金币数
+  sum = sum + (n - sumtemp)  * (day + 1) * (day + 1);//总数
+  console.log(sum);
+  </script>
+
+<script id="prime">//判断它是否是素数
+  //debugger
+  var isprime = function (x) {////素数判断质数函数
+    if (x > 1) {
+      for (var i = 2 ; i * i <=x ; i++) {
+        if (x % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    } else
+    return false;
+  }
+  var n = Number(prompt("请输入整数m:", "0"));
+    if (isprime(n)) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  </script>
+
+<script id="primes">//输出100以内的素数
+  //debugger
+  var isprime = function (x) {////素数判断质数函数
+    if (x > 1) {
+      for (var i = 2 ; i * i <=x ; i++) {
+        if (x % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    } else
+    return false;
+  }
+  for (var n = 2 ; n <=100 ; n++) {
+    if (isprime(n)) {
+      console.log(n);
+    }
+  }
+  </script>
+
+<script id="complete-number">//判断它是否是完全数
+  //debugger
+  var iscomplete = function (x) {//判断完全数
+    if (x > 1) {
+      var sum = 1;
+      for (var i = 2 ; i * i <=x ; i++) {
+        if (x % i == 0) {
+          sum = sum + i + x / i;
+        }
+      }
+      if (sum == x) {
+        return true
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+  var n = Number(prompt("请输入整数m:", "0"));
+    if (iscomplete(n)) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  </script>
+
+<script id="complete-numbers">//输出1000以内的完全数
+  //debugger
+  var iscomplete = function (x) {///判断它是否是完全数
+    if (x > 1) {
+      var sum = 1;
+      for (var i = 2 ; i * i <=x ; i++) {
+        if (x % i == 0) {
+          sum = sum + i + x / i;
+        }
+      }
+      if (sum == x) {
+        return true
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+for (var n = 2 ; n <=1000 ; n++) {
+    if (iscomplete(n)) {
+      console.log(n);
+    }
+  }
+  </script>
+
+
+<script id="palindrom">//判断它数是否是回文数
+  //debugger
+  var ispalindrom = function (x) {//判断它数是否是回文数
+    var n = String(x);
+    var long = n.length;
+      for (var i = 0; i <= (long / 2) ; i ++) {
+        if (n.charAt(i) == n.charAt(long - 1- i)) {
+          continue;
+        } else {
+          return false;
+        }
+      }
+      return true;
+  }
+  var n = Number(prompt("请输入整数m:", "0"));
+    if (ispalindrom(n)) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
   </script>
