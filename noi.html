@@ -1234,19 +1234,18 @@
   }
   </script>
 
-<script id="sqrt">//求它的平方根，
+<script id="sqrt">//求平方根，
   //debugger
-  var n = Number(prompt("请输入整数m:", "0"));
-  var an = 0, day = 0, sum = 0;//首相为1，公差1等差数列求和公式
-  var delt = 0.5 * 0.5 + 4 * 0.5 * n;//
-  an = -0.5 + Math.sqrt(delt);//第an项
-  day = Math.floor(an);//前整数天
-  for(var i = 1 ; i <= day ; i++) {//求金币总数
-    sum = sum + i * i;
+  var issqrt = function (x) {
+    for ( var i = 0.0001 ; i < n ; i = i + 0.0001) {
+      if (n - i * i < 0.0001) {
+        return i;
+      }
+    }
   }
-  sumtemp = day + day * (day - 1) / 2;//前几天所得金币数
-  sum = sum + (n - sumtemp)  * (day + 1) * (day + 1);//总数
-  console.log(sum);
+  var n = Number(prompt("请输入整数m:", "0"));
+  var a = issqrt(n);
+  console.log(a.toFixed(3));
   </script>
 
 <script id="prime">//判断它是否是素数
