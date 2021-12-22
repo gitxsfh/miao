@@ -708,7 +708,7 @@
   console.log(path.toFixed(4), height.toFixed(7));
 </script>
 
-<script id="ch0105/21">//TODO角谷猜想
+<script id="ch0105/21">//角谷猜想
   var n = Number(prompt("请输入整数:", "0"));
 
   while (n != 1) {
@@ -764,23 +764,27 @@
   console.log(nomedic);
 </script>
 
-<script id="ch0105/24">//TODO血压时间
+<script id="ch0105/24">//血压时间
   var n = Number(prompt("请输入整数:", "0"));
   var time = 0;
+  var maxtime = 0;
   while (n > 0) {
     max = Number(prompt("请输入:", "0"));
     min = Number(prompt("请输入:", "0"));
     if (max >= 90 && max <= 140 && min >= 60 && min <= 90) {
       time = time + 1;
+      if (time > maxtime) {
+        maxtime = time;
+      }
     } else {
       time = 0;
     }
     n = n - 1;
   }
-  console.log(time);
+  console.log(maxtime);
 </script>
 
-<script id="ch0105/25">//特殊自然数,七进制与九进制
+<script id="ch0105/25">//TODO特殊自然数,七进制与九进制
   for (var n = 90 ; n < 10000; n++) {
     //var n = Number(prompt("请输入整数:", "0"));
     //得7进制数
@@ -841,21 +845,29 @@
   var n = 1, sum = 0;
   while (sum <= k) {
     sum = sum + 1 / n;
+    if (sum > k) {
+      break;
+    }
     n = n + 1;
   }
-  console.log(n - 1);
+  console.log(n);
 </script>
 
-<script id="ch0105/28">//分离任意整数//
-  var n = String(prompt("请输入整数:", "0"));//567//位数选择器
-  var long = n.length;
-  for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
-    console.log(n.charAt(x));
+<script id="ch0105/28">//分离任意整数//字符法和取余法
+  var n = Number(prompt("请输入整数:", "0"));//567//位数选择器
+//  var long = n.length;
+//  for ( var x = (long - 1) ; x >= 0 ; x = x - 1) {
+//    console.log(n.charAt(x));
+//  }
+  while(n > 0) {//123
+    d = n % 10;//3//2//1
+    console.log(d);//3//2//1
+    n = (n - d) / 10;//12//1//0
   }
 </script>
 
 <script id="ch0105/29">//按位取反//字符串法
-  var n = String(prompt("请输入整数:", "0"));//567//位数选择器
+  var n = String(prompt("请输入整数:", "0"));
   var long = n.length;//
   var perchart = '', newchart = '';
   n_number = Number(n);
@@ -877,14 +889,34 @@
   }
 </script>
 
-<script id="ch0105/29_2">//TODO分离任意整数//取余法
-  var n = Number(prompt("请输入整数:", "0"));//567//位数选择器
-  for (var i = 1 ; i)
-    a1 = n % 10;
-    newnumber = a1 * 10;
+<script id="ch0105/29_2">//按位取反//取余法
+  var reverNo = function (x) {//子函数
+    var newnumber = 0, d = 0;
+    if (x == 0) {
+      return 0;
+    } else {
+        while(x > 0) {
+          d = x % 10;
+          x = (x - d) / 10;
+          newnumber = newnumber * 10 + d;
+        }
+        return newnumber;
+    }
+  }
+  var n = Number(prompt("请输入整数:", "0"));
+  var newnumber = 0;
+  var x = n;
+  if ( x >= 0) {
+    newnumber = reverNo(x);
+    console.log(newnumber);
+  } else {
+    x = -x;
+    newnumber = reverNo(x);
+    console.log(-newnumber);
+  }
 </script>
 
-<script id="ch0105/30">//含k个3的数19整除
+<script id="ch0105/30">//含k个3的数19整除,字符串法
   var m = Number(prompt("请输入整数m:", "0"));
   var k = Number(prompt("请输入整数k:", "0"));
   if (m % 19 == 0) {
@@ -894,6 +926,28 @@
         if (n.charAt(x) == '3') {
           kNumber = kNumber + 1;
         }
+    }
+    if (kNumber == k) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  } else {
+    console.log('NO');
+  }
+</script>
+
+<script id="ch0105/30_2">//含k个3的数19整除//取余法
+  var m = Number(prompt("请输入整数m:", "0"));
+  var k = Number(prompt("请输入整数k:", "0"));
+  var kNumber = 0, d = 0, n = m;
+  if (n % 19 == 0) {
+    while(n > 0) {//123
+      d = n % 10;//3//2//1
+      if (d == 3) {
+        kNumber ++;
+      }
+      n = (n - d) / 10;//12//1//0
     }
     if (kNumber == k) {
       console.log('YES');
@@ -955,55 +1009,43 @@
   console.log(totalsum.toFixed(4));
 </script>
 
-<script id="ch0105/34">//TODO阶乘的和求和
+<script id="ch0105/34">//阶乘的和求和//重构循环次数
   //debugger
   var n = Number(prompt("请输入整数n:", "0"));
-  var sum, totalsum = 0;
-  var i = 0 , j = 0;
-  for (i = n; i >= 1 ; i = i - 1) {
-    sum = 1;
-    for (j = 1; j <= i ; j = j + 1) {
-        sum = sum * j;
-    }
+  var sum = 1, totalsum = 0;
+  for ( var i = 1; i <= n ; i = i + 1) {
+    sum = sum * i;
     totalsum = totalsum + sum;
   }
-
   console.log(totalsum);
 </script>
 
-<script id="ch0105/35">//TODOe阶乘的和
+<script id="ch0105/35">//e阶乘的和//重构循环次数
   //debugger
   var n = Number(prompt("请输入整数n:", "0"));
-  var sum, totalsum = 1;
-  var i = 0 , j = 0;
-  for (i = n; i >= 1 ; i = i - 1) {
-    sum = 1;
-    for (j = 1; j <= i ; j = j + 1) {
-        sum = sum * j;
-    }
+  var sum = 1, totalsum = 1;
+  for ( var i = 1; i <= n ; i = i + 1) {
+    sum = sum * i;
     totalsum = totalsum + 1 / sum;
   }
 
   console.log(totalsum.toFixed(10));
 </script>
 
-<script id="ch0105/36">//多项式的和
+<script id="ch0105/36">//多项式的和//重构循环次数
   //debugger
   var x = Number(prompt("请输入整数x:", "0"));
   var n = Number(prompt("请输入整数n:", "0"));
-  var sum, totalsum = 1;
-  var i = 0, j = 0;
-  for (i = n; i >= 1; i = i - 1) {
-    sum = 1;
-    for (j = 1; j <= i; j = j + 1) {
-      sum = sum * x;
-    }
+  var sum = 1, totalsum = 1;
+  for ( var i = 1; i <= n ; i = i + 1) {
+    sum = x * sum;
     totalsum = totalsum + sum;
   }
+
   console.log(totalsum.toFixed(2));
 </script>
 
-<script id="ch0105/37">//雇佣兵
+<script id="ch0105/37">//TODO雇佣兵
   //debugger
   var maxbody = Number(prompt("请输入整数m:", "0"));
   var startStrength = Number(prompt("请输入整数n:", "0"));
@@ -1203,6 +1245,22 @@
         return false;
       }
   }
+  var longth = function (x)
+  {
+    var n = x, nLong = 0;
+    while ( n != 0 ) {//123
+      d = n % 10;//3
+      sum = sum + d **3
+      nLong ++;
+      n = (n - d ) / 10;//12
+    }
+    return nLong;
+    if (sum == x) {
+      return true;
+    } else {
+      return false
+    }
+  }
   var n = Number(prompt("请输入整数m:", "0"));
     if (isnarcissistic(n)) {
       console.log('YES');
@@ -1294,7 +1352,7 @@
   var iscomplete = function (x) {//判断完全数
     if (x > 1) {
       var sum = 1;
-      for (var i = 2 ; i * i <=x ; i++) {
+      for (var i = 2 ; i * i <=x ; i++) {//开方次数
         if (x % i == 0) {
           sum = sum + i + x / i;
         }
