@@ -28,4 +28,28 @@ var gitxsfh = {
     }
     return result
   },
+  drop: function (array, n = 1) {
+    if (n >= array.length) {
+      return []
+    }
+    let result = array
+    for (let i = 0; i < n; i++) {
+      if (array[i]) {
+        result.shift()
+      }
+    }
+    return result
+  },
+  dropRight: function (array, n = 1) {
+    if (n >= array.length) {
+      return []
+    }
+    let result = array
+    for (let i = 0; i < n; i++) {
+      if (array[i]) {
+        result.pop()
+      }
+    }
+    return result
+  },
 }
