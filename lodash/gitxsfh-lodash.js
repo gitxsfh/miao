@@ -116,6 +116,27 @@ var gitxsfh = {
     return a
   },
 
+  last: function (array) {
+    let n = array
+    return n[n.length - 1]
+  },
+
+  lastIndexOf: function (array, value, fromIndex = 0) {
+    for (let i = array.length - 1 - fromIndex; i >= 0; i--) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
+  },
+  reverse: function (array) {
+    let n = array.length
+    let newa = Array(n)
+    for (let i = 0; i < n; i++) {
+      newa[n - 1 - i] = array[i]
+    }
+    return newa
+  },
 
 }
 
