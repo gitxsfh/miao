@@ -81,6 +81,40 @@ var gitxsfh = {
     return result
   },
 
+  head: function (array) {
+    if (array.length == 0) {
+      return undefined
+    } else {
+      let newa = array
+      return newa[0]
+    }
+  },
+
+  indexOf: function (array, value, fromIndex = 0) {
+    for (let i = fromIndex; i < array.length; i++) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
+  },
+
+  initial: function (array) {
+    let n = array.length - 1
+    let a = Array(n)
+    for (let i = 0; i < n; i++) {
+      a[i] = array[i]
+    }
+    return a
+  },
+
+  join: function (array, separator = ',') {
+    let n = array.length
+    for (let i = 0; i < n; i++) {
+      a[i] = array[i]
+    }
+    return a
+  },
 
 
 }
