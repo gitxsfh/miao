@@ -1,4 +1,4 @@
-var username = {
+var gitxsfh = {
   chunk: function (array, size) {
 
   }
