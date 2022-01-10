@@ -52,4 +52,36 @@ var gitxsfh = {
     }
     return result
   },
+  findIndex: function (array, predicate, fromIndex = 0) {
+    for (fromIndex = 0; fromIndex < array.length; fromIndex++) {
+      for (let i in array[fromIndex]) {
+      }
+    }
+    return fromIndex
+  },
+
+
+  flatten: function (array) {
+    let newa = [].concat.apply([], array);
+    return newa
+  },
+
+  flattenDeep: function (array) {
+    return array.reduce((prev, curr) => {
+      return prev.concat(Array.isArray(curr) ? flattenDeep(array) : array)
+    }, [])
+  },
+  fromPairs: function (pairs) {
+    let total = pairs.length
+    let result = {}
+    for (let i = 0; i < total; i++) {
+      let j = 0
+      result[pairs[i][j]] = pairs[i][j + 1]
+    }
+    return result
+  },
+
+
+
 }
+
